@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -6,9 +7,9 @@ const Navbar = () => {
             <div className="flex gap-5 items-center justify-between lg:w-8/12 text-[#1A1A1A]">
                 <div className="flex items-center gap-2">
                     <Image src="/assets/svg/menu.svg" width={80} height={80} className="lg:hidden" alt="" />
-                    <a href="./index.html">
+                    <Link href="/">
                         <Image src="/assets/lws-logo-black.svg" width={120} height={70} alt="" />
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="flex items-center justify-end gap-2 lg:gap-5 lg:w-4/12">
