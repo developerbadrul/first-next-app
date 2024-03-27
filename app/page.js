@@ -2,7 +2,7 @@ import NewsLetterSection from "@/components/NewsLetterSection";
 import ProductsSection from "@/components/ProductsSection";
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
       {/* <!-- Product section start --> */}
