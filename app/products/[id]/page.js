@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import products from '@/public/data/products';
+import Link from 'next/link';
 
 const ProductPage = ({ params: { id } }) => {
     const product = products.find(product => product.id === parseInt(id));
@@ -26,9 +27,8 @@ const ProductPage = ({ params: { id } }) => {
                     </div>
                     <div className="w-full lg:w-5/12">
                         <h1 className="italic text-xl lg:text-3xl font-serif font-semibold">{product.title}</h1>
-                        <span className="text-[#919090] my-3">{product.category}</span>
+                        <span className="text-[#919090] my-3"> <Link href={`/category/${product.category}`}>{`(${product.category})`}</Link></span>
                         <div className="mt-3 flex items-center justify-start gap-1">
-                            {/* Render stars based on product rating */}
                             {Array.from({ length: Math.floor(product.rating) }, (_, index) => (
                                 <Image key={index} src="/assets/svg/star.svg" width={20} height={20} alt="Star" />
                             ))}
